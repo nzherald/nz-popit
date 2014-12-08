@@ -1,7 +1,12 @@
 {
   "name": "nz-popit",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/tuttinator/nz-popit.git"
+  },
   "dependencies": {
-    "popit-api": "~0.0.14"
+    "popit-api": "~0.0.14",
+    "express": "~4.10.4"
   }
 }
