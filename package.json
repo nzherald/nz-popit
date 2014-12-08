@@ -1,0 +1,7 @@
+{
+  "name": "nz-popit",
+  "version": "0.0.0",
+  "dependencies": {
+    "popit-api": "~0.0.14"
+  }
+}
