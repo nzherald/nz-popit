@@ -9,8 +9,8 @@ var apiApp = popitApi({
 });
 
 // Mount the PopIt API app at the appropriate path
-app.use('/api', apiApp);
+app.use('/', apiApp);
 
 // Start to listen
 app.listen(3000);
-console.log("API Server listening at http://127.0.0.1:3000/api");
+console.log("API Server listening at http://127.0.0.1:3000/");
