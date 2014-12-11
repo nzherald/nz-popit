@@ -1,16 +1,20 @@
-var express = require('express'),
-    popitApi  = require('popit-api');
+var express   = require('express'),
+    popitApi  = require('popit-api'),
+    dotenv    = require('dotenv');
 
-var app = express();
+dotenv.load();
+
+var app  = express(),
+    port = process.env.PORT;
 
 // Configure the PopIt API app
 var apiApp = popitApi({
-  databaseName: 'mp-contacts'
+  databaseName: process.env.DATABASE
 });
 
 // Mount the PopIt API app at the appropriate path
 app.use('/', apiApp);
 
 // Start to listen
-app.listen(3000);
-console.log("API Server listening at http://127.0.0.1:3000/");
+app.listen(port);
+console.log('API Server listening at http://127.0.0.1:' + port + '/');
